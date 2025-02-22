@@ -1,6 +1,6 @@
 import subprocess
 
-SPOTDL_PATH = r"C:\Users\sawnd\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
+SPOTDL_PATH = r"PASTE YOUR SPOTDL FILE PATH HERE"
 
 def download_spotify_track(url):
     print(f"Link Detected: {url}")
