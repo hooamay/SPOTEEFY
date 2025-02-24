@@ -1,40 +1,75 @@
-### Step-by-Step Installation Guide:
+import subprocess
 
-```bash
-# 1. Install Python
-# Download Python from https://www.python.org/downloads/
-# Run the installer and make sure to check the box that says "Add Python to PATH" during the installation process.
+# Replace this with the actual path of spotdl.exe
+SPOTDL_PATH = r"PASTE YOUR SPOTDL FILE PATH HERE"
 
-# Verify the installation:
+def download_spotify_track(url):
+    print(f"Link Detected: {url}")
+    print("Downloading...")
+
+    command = [SPOTDL_PATH, "download", url]
+
+    try:
+        subprocess.run(command, check=True)
+        print("Download Complete!")
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+
+print(r"""
+███████╗██████╗  ██████╗ ████████╗██╗███████╗██╗   ██╗    ██████╗ ██╗     
+██╔════╝██╔══██╗██╔═══██╗╚══██╔══╝██║██╔════╝╚██╗ ██╔╝    ██╔══██╗██║     
+███████╗██████╔╝██║   ██║   ██║   ██║█████╗   ╚████╔╝     ██║  ██║██║     
+╚════██║██╔═══╝ ██║   ██║   ██║   ██║██╔══╝    ╚██╔╝      ██║  ██║██║     
+███████║██║     ╚██████╔╝   ██║   ██║██║        ██║       ██████╔╝███████╗
+╚══════╝╚═╝      ╚═════╝    ╚═╝   ╚═╝╚═╝        ╚═╝       ╚═════╝ ╚══════╝
+CREATED BY: whoami
+""")
+
+if __name__ == "__main__":
+    spotify_url = input("Paste Spotify Track/Album URL: ").strip()
+    download_spotify_track(spotify_url)
+
+"""
+# Installation Instructions
+
+## 1. Install Python
+Download Python from https://www.python.org/downloads/
+Run the installer and check the box "Add Python to PATH" during installation.
+
+Verify installation:
+```sh
 python --version
+```
+If it shows a version number, Python is installed correctly.
 
-# If it shows a version number, Python is installed correctly.
-
-# 2. Install SpotDL
-# Open Command Prompt (Win + R, type `cmd`, and hit Enter).
+## 2. Install SpotDL
+```sh
 pip install spotdl
+```
 
-# 3. Download and Install FFmpeg using SpotDL
+## 3. Download and Install FFmpeg using SpotDL
+```sh
 spotdl --download-ffmpeg
+```
 
-# 4. Install Pytube
-pip install pytube
+## 4. Install Additional Dependencies
+```sh
+pip install pytube yt-dlp
+```
 
-# 5. Install yt-dlp
-pip install yt-dlp
-
-# 6. Verify the Installation
+## 5. Verify Installation
+```sh
 spotdl --version
+```
+If it displays a version number, SpotDL is installed successfully.
 
-# If it displays a version number, SpotDL is installed successfully.
-
-# 7. Locate the SpotDL Path using Command Prompt
+## 6. Locate SpotDL Path
+Open Command Prompt and run:
+```sh
 where spotdl
-
-# Copy the output from the command and use it in your script.
-
-# Example Output from Command Prompt:
-# C:\Users\whoami\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe
-
-# In your script, define the SPOTDL_PATH like this:
-SPOTDL_PATH = r"C:\Users\whoami\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
+```
+Copy the output and use it in your script as:
+```python
+SPOTDL_PATH = r"C:\\Users\\whoami\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\spotdl.exe"
+```
+"""
