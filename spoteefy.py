@@ -5,7 +5,7 @@ import re
 
 # Developed by: whoami
 
-SPOTDL_PATH = r"SPOTDL PATH HERE"
+SPOTDL_PATH = r"C:\Users\sawnd\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
 
 def download_spotify_track(url):
     print(f"Link Detected: {url}")
@@ -15,7 +15,8 @@ def download_spotify_track(url):
         print("Error: SpotDL not found at the specified path.")
         return
 
-    command = [SPOTDL_PATH, "download", url]
+    # Add --bitrate 320k flag to the command
+    command = [SPOTDL_PATH, "--bitrate", "320k", "download", url]
 
     try:
         subprocess.run(command, check=True)
@@ -65,4 +66,3 @@ if __name__ == "__main__":
 
         download_spotify_track(spotify_url)
         time.sleep(2)
-        
