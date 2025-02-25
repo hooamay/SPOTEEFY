@@ -1,0 +1,3 @@
+spotdl
+pytube
+yt-dlp
