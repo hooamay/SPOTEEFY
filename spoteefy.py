@@ -5,7 +5,7 @@ import re
 
 # Developed by: whoami
 
-SPOTDL_PATH = r"C:\Users\sawnd\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
+SPOTDL_PATH = r"C:\Users\whoami\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
 
 def download_spotify_track(url):
     print(f"Link Detected: {url}")
