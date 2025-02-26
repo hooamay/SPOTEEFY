@@ -35,5 +35,5 @@ where spotdl
 ```
 Copy the output and use it in your script as:
 ```python
-SPOTDL_PATH = r"C:\\Users\\whoami\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\spotdl.exe"
+SPOTDL_PATH = r"C:\Users\whoami\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
 ```
