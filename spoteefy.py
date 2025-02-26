@@ -43,7 +43,7 @@ DEVELOPED BY: whoami
 """)
 
 def validate_url(url):
-    spotify_pattern = r"^https:\/\/open\.spotify\.com\/(track|album|playlist)\/[a-zA-Z0-9]+(\?[\w&=]+)?$"
+    spotify_pattern = r"^https:\/\/open\.spotify\.com\/(track|album|playlist)\/[a-zA-Z0-9]+(\?[\w&=]*)?$"
     
     if re.match(spotify_pattern, url):
         return True
