@@ -16,14 +16,14 @@ If it shows a version number, Python is installed correctly.
 pip install -r requirements.txt
 ```
 
-## 3. Verify Installation
-```sh
-spotdl --version
-```
-
-## 4. Download and Install FFmpeg using SpotDL
+## 3. Download and Install FFmpeg using SpotDL
 ```sh
 spotdl --download-ffmpeg
+```
+
+## 4. Verify Installation
+```sh
+spotdl --version
 ```
 
 If it displays a version number, SpotDL is installed successfully.
