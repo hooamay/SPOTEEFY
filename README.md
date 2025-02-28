@@ -47,7 +47,7 @@ import os
 import time
 import re
 
-# Developed by: whoami
+# DEVELOPED BY: whoami
 
 SPOTDL_PATH = r"C:\Users\whoami\AppData\Local\Programs\Python\Python313\Scripts\spotdl.exe"
 
